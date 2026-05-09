@@ -13,4 +13,4 @@ Fecha:08/05/2026
 ## Objetivo
 
 ## Dataset
-
+datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report
