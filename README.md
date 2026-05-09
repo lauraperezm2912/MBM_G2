@@ -1,5 +1,5 @@
 # Proyecto:   
 OMICAS GRUPO 2  
-Tema:  Metagenomica en Mycobacterium tuberculosis
+Tema:  Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis  
 Integrantes: Pérez Laura, Mindiola Edwar, Baquedano Genesis, Guzman Genesis  
 Fecha:08/05/2026  
