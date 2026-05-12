@@ -16,7 +16,12 @@ La tuberculosis (TB) continúa siendo una de las principales causas de mortalida
 El estudio se basa en el artículo científico “Metagenomic DNA sequencing to quantify *Mycobacterium tuberculosis* DNA and diagnose tuberculosis” publicado en *Scientific Reports*. Los autores evaluaron la efectividad de esta técnica utilizando muestras provenientes de regiones endémicas y no endémicas de tuberculosis, demostrando que la presencia de ADN de micobacterias no tuberculosas puede afectar significativamente la precisión diagnóstica.
 
 Este proyecto tiene como finalidad comprender la importancia de las técnicas moleculares modernas en el diagnóstico de enfermedades infecciosas y analizar las limitaciones que existen en la detección de tuberculosis mediante secuenciación metagenómica.
+## Planteamiento del problema 
 ## Objetivo
-Analizar la utilidad de la secuenciación metagenómica de ADN en la detección de *Mycobacterium tuberculosis* para el diagnóstico de tuberculosis.
+
 ## Dataset
 datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report  
+## Flujo de Trabajo
+## Resultados
+## Contribucion individual
+##  Cómo reproducir (scripts)
