@@ -11,6 +11,6 @@ Fecha:08/05/2026
 *Baquedano Genesis  
 *Guzman Genesis    
 ## Objetivo
-
+Realizar un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* obtenidas de cohortes geográficamente diversas (Filipinas, Uganda, Perú y EE. UU.), con el fin de reconstruir su historia evolutiva mediante filogenia.
 ## Dataset
 .
