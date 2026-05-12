@@ -18,7 +18,6 @@ El estudio se basa en el artículo científico “Metagenomic DNA sequencing to 
 Este proyecto tiene como finalidad comprender la importancia de las técnicas moleculares modernas en el diagnóstico de enfermedades infecciosas y analizar las limitaciones que existen en la detección de tuberculosis mediante secuenciación metagenómica.
 ## Planteamiento del problema 
 ## Objetivo
-
 ## Dataset
 datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report 
 ## Bibliografia
