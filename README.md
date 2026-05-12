@@ -1,4 +1,3 @@
-# Proyecto:   
 OMICAS GRUPO 2  
 Fecha:08/05/2026  
 # Proyecto: Metagenomic DNA sequencing to quantify *Mycobacterium tuberculosis* DNA and diagnose tuberculosis  
