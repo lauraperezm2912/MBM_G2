@@ -4,6 +4,7 @@
 *Mindiola Edwar  
 *Baquedano Genesis  
 *Guzman Genesis 
+
 OMICAS GRUPO 2  
 Fecha:08/05/2026  
 ## Introducción
