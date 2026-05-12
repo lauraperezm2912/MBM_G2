@@ -1,4 +1,3 @@
-Gene-2026-0micas-patch-1
 # Proyecto:   
 OMICAS GRUPO 2  
 Tema:  
