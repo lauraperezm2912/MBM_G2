@@ -1,11 +1,11 @@
-OMICAS GRUPO 2  
-Fecha:08/05/2026  
 # Proyecto: Metagenomic DNA sequencing to quantify *Mycobacterium tuberculosis* DNA and diagnose tuberculosis  
 ## Integrantes  
 *Pérez Laura  
 *Mindiola Edwar  
 *Baquedano Genesis  
-*Guzman Genesis  
+*Guzman Genesis 
+OMICAS GRUPO 2  
+Fecha:08/05/2026  
 ## Introducción
 
 La tuberculosis (TB) continúa siendo una de las principales causas de mortalidad a nivel mundial causada por un agente infeccioso. El diagnóstico temprano representa un desafío importante, especialmente en pacientes con muestras insuficientes o con resultados negativos en métodos convencionales. En este proyecto se analiza el uso de la secuenciación metagenómica de ADN como una herramienta para la detección de *Mycobacterium tuberculosis* en diferentes biofluidos como plasma, orina y muestras orales.
