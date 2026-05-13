@@ -39,23 +39,23 @@ graph TB
     classDef output fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
 
     %% Nivel 1: Entrada
-    Raw[<b>Data Input</b><br/>Lecturas crudas FASTQ<br/>5 Cohortes Geográficas]:::input
+    Raw[<b>Data Input</b><br/>Lecturas crudas FASTQc<br/>Uganda, Rusia, India, Argentina, USA]]:::input
 
     %% Nivel 2: Calidad
     FQC(<b>Control de Calidad</b><br/>FastQC):::process
     Trim(<b>Limpieza y Trimado</b><br/>Trimmomatic<br/>HEADCROP:15<br/>SLIDINGWINDOW:4:20):::process
 
     %% Nivel 3: Alineamiento
-    Ref[(<b>Referencia</b><br/><i>M. tuberculosis</i><br/>H37Rv.fna)]:::reference
+    Ref[(<b>Referencia</b><br/><i>*M. tuberculosis*</i><br/>H37Rv.fna)]:::reference
     Map(<b>Alineamiento</b><br/>BWA-MEM):::process
 
     %% Nivel 4: Post-procesamiento
-    SAM(<b>Samtools</b><br/>SAM a BAM<br/>Ordenar e Indexar):::process
-    VCF(<b>Variantes</b><br/>BCFtools<br/>Detección de SNPs):::process
+    SAM(<b>Samtools</b><br/> Conversión SAM a BAM<br/>Ordenar e Indexar):::process
+    VCF(<b>Variantes</b><br/>BCFtools:<br/>Detección de SNPs):::process
 
     %% Nivel 5: Resultado
     Phylo(<b>Filogenia</b><br/>IQ-TREE<br/>GTR+G):::process
-    Tree{{<b>Salida Final</b><br/>Árbol Evolutivo<br/>iTOL / FigTree}}:::output
+    Tree{{<b>Salida Final</b><br/>Árbol Evolutivo<br/> Visualización: iTOL / FigTree}}:::output
 
     %% Flujo Vertical
     Raw --> FQC
