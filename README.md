@@ -75,7 +75,6 @@ graph TD
     Phylo --> Tree
 
     end
-    Tree -.-> iTOL
 ```
 
 
