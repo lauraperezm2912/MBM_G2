@@ -77,7 +77,6 @@ graph TD
     end
 ```
 
-
 ## Resultados
 ## Contribucion individual
 ##  Cómo reproducir (scripts)
