@@ -30,6 +30,58 @@ Paciente ubicación Argentina: SRR38405735
 ## Bibliografia
 Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
 ## Flujo de Trabajo
+```mermaid
+graph TD
+    %% Definición de Estilos
+    classDef input fill:#fdf2f2,stroke:#f05252,stroke-width:2px,color:#000;
+    classDef process fill:#e1effe,stroke:#3f83f8,stroke-width:2px,color:#000;
+    classDef reference fill:#f3f4f6,stroke:#4b5563,stroke-width:2px,color:#000;
+    classDef output fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
+
+    %% Nivel 1: Entrada de Datos
+    Raw[<b>Data Input</b><br/>Raw FASTQ Reads<br/>Cohortes: Uganda, Rusia, India, Argentina, USA]
+    class Raw input;
+
+    %% Nivel 2: Control de Calidad
+    FQC(<b>Control de Calidad</b><br/>FastQC: Evaluación inicial de calidad)
+    Trim(<b>Limpieza y Trimado</b><br/>Trimmomatic: HEADCROP:15 + SLIDINGWINDOW)
+    class FQC,Trim process;
+
+    %% Nivel 3: Alineamiento
+    Ref[(<b>Referencia</b><br/>M. tuberculosis H37Rv.fna)]
+    Map(<b>Alineamiento - Mapping</b><br/>BWA-MEM: Alineamiento contra molde)
+    class Ref reference;
+    class Map process;
+
+    %% Nivel 4: Post-procesamiento
+    SAM(<b>Samtools Processing</b><br/>Conversión SAM a BAM, Ordenar e Indexar)
+    VCF(<b>Variant Calling</b><br/>BCFtools: Detección de SNPs)
+    class SAM,VCF process;
+
+    %% Nivel 5: Filogenia y Resultado
+    Phylo(<b>Inferencia Filogenética</b><br/>IQ-TREE: Máxima Verosimilitud GTR+G)
+    Tree{{<b>Output Final</b><br/>Árbol Evolutivo e Historia Biogeográfica}}
+    class Phylo process;
+    class Tree output;
+
+    %% Conexiones (Flujo)
+    Raw --> FQC
+    FQC --> Trim
+    Trim --> Map
+    Ref --> Map
+    Map --> SAM
+    SAM --> VCF
+    VCF --> Phylo
+    Phylo --> Tree
+
+    %% Notas de Herramientas de Visualización
+    subgraph "Visualización"
+        iTOL[iTOL / FigTree]
+    end
+    Tree -.-> iTOL
+```
+
+
 ## Resultados
 ## Contribucion individual
 ##  Cómo reproducir (scripts)
