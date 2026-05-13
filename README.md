@@ -10,13 +10,15 @@ Fecha:08/05/2026
 *Baquedano Genesis  
 *Guzman Genesis  
 ## Introducción
+La tuberculosis es una enfermedad infecciosa causada por *Mycobacterium tuberculosis* y continúa representando un importante problema de salud pública a nivel mundial. La capacidad de esta bacteria para adaptarse y presentar variaciones genéticas entre distintas poblaciones ha despertado gran interés en el área de la bioinformática y la genómica comparativa. El estudio de variantes genómicas permite comprender mejor la diversidad genética del microorganismo, así como sus procesos de evolución y dispersión en diferentes regiones geográficas.
 
-La tuberculosis (TB) continúa siendo una de las principales causas de mortalidad a nivel mundial causada por un agente infeccioso. El diagnóstico temprano representa un desafío importante, especialmente en pacientes con muestras insuficientes o con resultados negativos en métodos convencionales. En este proyecto se analiza el uso de la secuenciación metagenómica de ADN como una herramienta para la detección de *Mycobacterium tuberculosis* en diferentes biofluidos como plasma, orina y muestras orales.
+Actualmente, las herramientas bioinformáticas y los análisis filogenéticos facilitan la comparación de secuencias genómicas provenientes de distintas muestras, permitiendo identificar relaciones evolutivas entre cepas bacterianas. Este tipo de análisis resulta relevante para comprender cómo ciertas variantes pueden estar asociadas a procesos de transmisión, adaptación o diferencias epidemiológicas entre países.
 
-El estudio se basa en el artículo científico “Metagenomic DNA sequencing to quantify *Mycobacterium tuberculosis* DNA and diagnose tuberculosis” publicado en *Scientific Reports*. Los autores evaluaron la efectividad de esta técnica utilizando muestras provenientes de regiones endémicas y no endémicas de tuberculosis, demostrando que la presencia de ADN de micobacterias no tuberculosas puede afectar significativamente la precisión diagnóstica.
-
-Este proyecto tiene como finalidad comprender la importancia de las técnicas moleculares modernas en el diagnóstico de enfermedades infecciosas y analizar las limitaciones que existen en la detección de tuberculosis mediante secuenciación metagenómica.
+En este proyecto se realizará un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* provenientes de Filipinas, Uganda, Perú y Estados Unidos. Mediante herramientas de análisis filogenético y comparación genómica, se buscará reconstruir la historia evolutiva de estas cepas y comprender la relación genética existente entre muestras obtenidas en distintas regiones del mundo.
 ## Planteamiento del problema 
+La tuberculosis sigue siendo una de las enfermedades infecciosas con mayor impacto global, y la diversidad genética de *Mycobacterium tuberculosis* representa un reto para comprender su evolución y propagación. Las diferencias genómicas presentes entre cepas aisladas en distintas regiones geográficas pueden influir en su comportamiento biológico, transmisión y adaptación, lo que hace necesario realizar estudios comparativos que permitan identificar relaciones evolutivas entre ellas.
+
+A pesar de los avances en secuenciación y análisis genómico, todavía existen limitaciones para comprender cómo las variantes genéticas de *Mycobacterium tuberculosis* se distribuyen y evolucionan entre diferentes poblaciones humanas. Por ello, resulta importante comparar muestras provenientes de Filipinas, Uganda, Perú y Estados Unidos mediante herramientas bioinformáticas y análisis filogenéticos que permitan reconstruir su historia evolutiva y analizar la diversidad genética de este microorganismo.
 ## Objetivo
 
 ## Dataset
