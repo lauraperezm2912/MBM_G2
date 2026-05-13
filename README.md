@@ -39,10 +39,10 @@ graph TB
     classDef output fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
 
     %% Nivel 1: Entrada
-    Raw[<b>Data Input</b><br/>Lecturas crudas FASTQc<br/>Uganda, Rusia, India, Argentina, USA]]:::input
+    Raw[<b>Data Input</b><br/>Lecturas crudas FASTQc<br/>Uganda, Rusia, India, Argentina, USA]:::input
 
     %% Nivel 2: Calidad
-    FQC(<b>Control de Calidad</b><br/>FastQC):::process
+    FQC(<b>Control de Calidad</b><br/>FastQC)::process
     Trim(<b>Limpieza y Trimado</b><br/>Trimmomatic<br/>HEADCROP:15<br/>SLIDINGWINDOW:4:20):::process
 
     %% Nivel 3: Alineamiento
@@ -66,6 +66,7 @@ graph TB
     SAM --> VCF
     VCF --> Phylo
     Phylo --> Tree
+   
 ```
 
 ## Resultados
