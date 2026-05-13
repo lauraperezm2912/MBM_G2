@@ -39,28 +39,28 @@ graph TD
     classDef output fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
 
     %% Nivel 1: Entrada de Datos
-    Raw[<b>Data Input</b><br/>Raw FASTQ Reads<br/>Cohortes: Uganda, Rusia, India, Argentina, USA]
+    Raw[<b>Data Input</b><br/>Lecturas crudas FASTQc<br/>Cohortes: Uganda, Rusia, India, Argentina, USA]
     class Raw input;
 
     %% Nivel 2: Control de Calidad
-    FQC(<b>Control de Calidad</b><br/>FastQC: Evaluación inicial de calidad)
-    Trim(<b>Limpieza y Trimado</b><br/>Trimmomatic: HEADCROP:15 + SLIDINGWINDOW)
+    FQC(<b>Control de Calidad</b><br/>FastQC)
+    Trim(<b>Limpieza y Trimado</b><br/>Trimmomatic: HEADCROP:15 + SLIDINGWINDOW:4:20)
     class FQC,Trim process;
 
     %% Nivel 3: Alineamiento
-    Ref[(<b>Referencia</b><br/>M. tuberculosis H37Rv.fna)]
-    Map(<b>Alineamiento - Mapping</b><br/>BWA-MEM: Alineamiento contra molde)
+    Ref[(<b>Referencia</b><br/>*M. tuberculosis* H37Rv.fna)]
+    Map(<b>Alineamiento</b><br/>BWA-MEM: Alineamiento con secuencia de referencia)
     class Ref reference;
     class Map process;
 
     %% Nivel 4: Post-procesamiento
-    SAM(<b>Samtools Processing</b><br/>Conversión SAM a BAM, Ordenar e Indexar)
-    VCF(<b>Variant Calling</b><br/>BCFtools: Detección de SNPs)
+    SAM(<b>Procesamiento con Samtools</b><br/>Conversión SAM a BAM, Ordenar e Indexar)
+    VCF(<b>Identificación de Variantes </b><br/>BCFtools: Detección de SNPs)
     class SAM,VCF process;
 
     %% Nivel 5: Filogenia y Resultado
-    Phylo(<b>Inferencia Filogenética</b><br/>IQ-TREE: Máxima Verosimilitud GTR+G)
-    Tree{{<b>Output Final</b><br/>Árbol Evolutivo e Historia Biogeográfica}}
+    Phylo(<b>Filogenia</b><br/>IQ-TREE: Máxima Verosimilitud GTR+G)
+    Tree{{<b>Salida Final</b><br/>Árbol Evolutivo y Visualización con iTOL / FigTree}}
     class Phylo process;
     class Tree output;
 
@@ -74,9 +74,6 @@ graph TD
     VCF --> Phylo
     Phylo --> Tree
 
-    %% Notas de Herramientas de Visualización
-    subgraph "Visualización"
-        iTOL[iTOL / FigTree]
     end
     Tree -.-> iTOL
 ```
