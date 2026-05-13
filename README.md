@@ -1,14 +1,10 @@
-# Proyecto:   
-OMICAS GRUPO 2  
-Tema:  
-Integrantes: Pérez Laura, Mindiola Edwar, Baquedano Genesis, Guzman Genesis  
-Fecha:08/05/2026  
 # Proyecto: Metagenomic DNA sequencing to quantify *Mycobacterium tuberculosis* DNA and diagnose tuberculosis  
 ## Integrantes  
 *Pérez Laura  
 *Mindiola Edwar  
 *Baquedano Genesis  
 *Guzman Genesis  
+
 ## Introducción
 La tuberculosis es una enfermedad infecciosa causada por *Mycobacterium tuberculosis* y continúa representando un importante problema de salud pública a nivel mundial. La capacidad de esta bacteria para adaptarse y presentar variaciones genéticas entre distintas poblaciones ha despertado gran interés en el área de la bioinformática y la genómica comparativa. El estudio de variantes genómicas permite comprender mejor la diversidad genética del microorganismo, así como sus procesos de evolución y dispersión en diferentes regiones geográficas.
 
@@ -20,7 +16,7 @@ La tuberculosis sigue siendo una de las enfermedades infecciosas con mayor impac
 
 A pesar de los avances en secuenciación y análisis genómico, todavía existen limitaciones para comprender cómo las variantes genéticas de *Mycobacterium tuberculosis* se distribuyen y evolucionan entre diferentes poblaciones humanas. Por ello, resulta importante comparar muestras provenientes de Filipinas, Uganda, Perú y Estados Unidos mediante herramientas bioinformáticas y análisis filogenéticos que permitan reconstruir su historia evolutiva y analizar la diversidad genética de este microorganismo.
 ## Objetivo
-
+Realizar un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* obtenidas de cohortes geográficamente diversas (Filipinas, Uganda, Perú y EE. UU.), con el fin de reconstruir su historia evolutiva mediante filogenia.
 ## Dataset
 datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report 
 ## Bibliografia
