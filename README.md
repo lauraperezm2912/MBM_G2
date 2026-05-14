@@ -59,32 +59,36 @@ graph TB
 ```
 
 ```mermaid
-graph TD
-    %% Definición de Estilos
+graph LR
+    %% Definición de Estilos originales
     classDef input fill:#fdf2f2,stroke:#f05252,stroke-width:2px,color:#000;
     classDef process fill:#e1effe,stroke:#3f83f8,stroke-width:2px,color:#000;
     classDef reference fill:#f3f4f6,stroke:#4b5563,stroke-width:2px,color:#000;
     classDef output fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
 
-    %% Primera fila: Preparación
-    Raw[<b>Entrada de datos</b><br/>NCBI: FASTQ]:::input --> FQC(<b>Calidad</b><br/>FastQC):::process
-    FQC --> Trim(<b>Limpieza</b><br/>Trimmomatic):::process
-    
-    %% Conexión hacia abajo y cambio de dirección
-    direction LR
-    Trim --> Map(<b>Mapeo</b><br/>BWA-MEM):::process
-    Ref[(<b>Referencia</b><br/>H37Rv)]:::reference --> Map
+    %% Nivel 1: Entrada
+    Raw[<b>Entrada de datos</b><br/> NCBI: Lecturas crudas FASTQ<br/>Uganda, Rusia, India, Argentina, USA]:::input
 
-    %% Segunda fila: Análisis
-    direction TB
-    Map --> SAM(<b>Samtools</b><br/>SAM/BAM):::process
-    SAM --> VCF(<b>Variantes</b><br/>BCFtools SNPs):::process
+    %% Nivel 2: Calidad
+    FQC(<b>Control de Calidad</b><br/>FastQC):::process
+    Trim(<b>Limpieza y Trimado</b><br/>Trimmomatic<br/>HEADCROP:15<br/>SLIDINGWINDOW:4:20):::process
 
-    %% Tercera fila: Resultados final
-    direction RL
-    VCF --> Phylo(<b>Filogenia</b><br/>IQ-TREE):::process
-    Phylo --> Tree{{<b>Resultado</b><br/>Árbol Evolutivo}}:::output
+    %% Nivel 3: Alineamiento
+    Ref[(<b>Referencia</b><br/><i>M. tuberculosis</i><br/>H37Rv.fna)]:::reference
+    Map(<b>Alineamiento</b><br/>BWA-MEM):::process
 
+    %% Nivel 4: Post-procesamiento
+    SAM(<b>Samtools</b><br/> Conversión SAM a BAM<br/>Ordenar e Indexar):::process
+    VCF(<b>Variantes</b><br/>BCFtools:<br/>Detección de SNPs):::process
+
+    %% Nivel 5: Resultado
+    Phylo(<b>Filogenia</b><br/>IQ-TREE<br/>GTR+G):::process
+    Tree{{<b>Salida Final</b><br/>Árbol Evolutivo<br/> Visualización: iTOL / FigTree}}:::output
+
+    %% Conexiones
+    Raw --> FQC --> Trim --> Map
+    Ref --> Map
+    Map --> SAM --> VCF --> Phylo --> Tree
 ```
 
 ## Resultados  
