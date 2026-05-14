@@ -18,8 +18,6 @@ Paciente ubicación San Petersburgo: SRR26387480
 Paciente ubicación India: SRR36403484  
 Paciente ubicación Argentina: SRR38405735  
 
-## Bibliografia
-Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
 ## Flujo de Trabajo
 ```mermaid
 graph TB
@@ -56,10 +54,12 @@ graph TB
     Map --> SAM
     SAM --> VCF
     VCF --> Phylo
-    Phylo --> Tree
+    Phylo --> Tree  
    
 ```
 
-## Resultados
+## Resultados  
+## Bibliografía
+Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
 ## Contribucion individual
 ##  Cómo reproducir (scripts)
