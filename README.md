@@ -18,7 +18,7 @@ A pesar de los avances en secuenciación y análisis genómico, todavía existen
 ## Objetivo
 Realizar un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* obtenidas de cohortes geográficamente diversas (Uganda, Rusia ,India, Argentina y EE. UU.), con el fin de reconstruir su historia evolutiva mediante filogenia.
 ## Dataset
-datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report (genome reference)
+datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report (genome reference)  
 Datasets de pacientes ubicados en diversos países y regiones, incluyendo Uganda, Argentina y la India, así como en ciudades y estados específicos como Moscú, San Petersburgo y Texas.
 
 Paciente ubicación Uganda: SRR38304207  
