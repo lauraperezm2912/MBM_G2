@@ -58,6 +58,35 @@ graph TB
    
 ```
 
+```mermaid
+graph TD
+    %% Definición de Estilos
+    classDef input fill:#fdf2f2,stroke:#f05252,stroke-width:2px,color:#000;
+    classDef process fill:#e1effe,stroke:#3f83f8,stroke-width:2px,color:#000;
+    classDef reference fill:#f3f4f6,stroke:#4b5563,stroke-width:2px,color:#000;
+    classDef output fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
+
+    %% Primera fila: Preparación
+    Raw[<b>Entrada de datos</b><br/>NCBI: FASTQ]:::input --> FQC(<b>Calidad</b><br/>FastQC):::process
+    FQC --> Trim(<b>Limpieza</b><br/>Trimmomatic):::process
+    
+    %% Conexión hacia abajo y cambio de dirección
+    direction LR
+    Trim --> Map(<b>Mapeo</b><br/>BWA-MEM):::process
+    Ref[(<b>Referencia</b><br/>H37Rv)]:::reference --> Map
+
+    %% Segunda fila: Análisis
+    direction TB
+    Map --> SAM(<b>Samtools</b><br/>SAM/BAM):::process
+    SAM --> VCF(<b>Variantes</b><br/>BCFtools SNPs):::process
+
+    %% Tercera fila: Resultados final
+    direction RL
+    VCF --> Phylo(<b>Filogenia</b><br/>IQ-TREE):::process
+    Phylo --> Tree{{<b>Resultado</b><br/>Árbol Evolutivo}}:::output
+
+```
+
 ## Resultados  
 ## Bibliografía
 Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
