@@ -25,3 +25,4 @@ A pesar de los avances en secuenciación y análisis genómico, todavía existen
 ## 5. Discusión   
 ## 6. Conclusiones  
 ## 7. Referencias bibliográficas  
+Doughty, EL, Sergeant, MJ, Adetifa, I., Antonio, M., Pallen, MJ y Clark, TG (2022). Secuenciación de ADN metagenómico para cuantificar el ADN de Mycobacterium tuberculosis y diagnosticar la tuberculosis . Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
