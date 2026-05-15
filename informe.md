@@ -80,19 +80,19 @@ En la figura 4 y 5, se observó la comparativa la calidad entre los datos crudos
 
 **Figura 4**  
 Reporte de calidad FastQC de una secuencia cruda  
-<img src="resultados/imagenes/Fastqc crudo stadistics.jpg " alt="FastQC crudo" width="100%">  
+<img src="resultados/imagenes/Fastqc crudo stadistics.jpg " alt="FastQC crudo" width="80%">  
 **Figura 5**  
 Reporte de calidad FastQC de una secuencia sometida a Trimmomatic  
-<img src="resultados/imagenes/Fastqc trimmed stadistics.jpg " alt="FastQC trimmed" width="100%">  
+<img src="resultados/imagenes/Fastqc trimmed stadistics.jpg " alt="FastQC trimmed" width="80%">  
 
 En la figura 6 y 7, se observa el contenido de secuencias por base antes y despues de Trimmomatic, evidenciando un cambio significativo tras su procesamiento al existir fluctuaciones en los primeros 15 nucleótidos y al final obteniendo proporciones de bases constantes y paralelas a lo largo de la lectura obteniendo así datos libres de ruidos para su posterior alineamiento.  
 
 **Figura 6**    
 Contenido de secuencia por base de una secuencia cruda    
-<img src="resultados/imagenes/Sequence content crudo.jpg " alt="FastQC contenido crudo" width="100%">  
+<img src="resultados/imagenes/Sequence content crudo.jpg " alt="FastQC contenido crudo" width="80%">  
 **Figura 7**  
 Contenido de secuencia por base de una secuencia sometida a Trimmomatic    
-<img src="resultados/imagenes/Sequence content trimmed.jpg " alt="FastQC contenido trimmed" width="100%">    
+<img src="resultados/imagenes/Sequence content trimmed 2.jpg " alt="FastQC contenido trimmed" width="80%">    
 
 En la figura 8, se obtuvo en el árbol filogenético un clado sólido con valor de bootstrap de 100 que incluye las muestras de San Petersburgo, Uganda y Texas. Mientras que, las muestras de Moscú e India tienen un valor de 63 lo que sugiere una incertidumbre estadística. Además, se observa que las muestras más emparentadas son San Petersburgo y Texas al compartir un nodo común. A su vez, se observó que Uganda tiene la rama horizontal más larga lo que sugiere una mayor cantidad de variaciones genéticas respecto al ancestro común. En tanto que, Moscú e India tienen ramas muy cortas y cercanas al eje principal lo que indica que son más similares genéticamente a la cepa ancestral.   
 
