@@ -66,7 +66,7 @@ graph TB
 
 ## 4. Resultados  
 
-En la figura 2 
+En las figuras 2 y 3,se obtuvo un reporte comparativo de MultiQC de las cinco distintas muestras geograficas, mismo en el que se observa una mejora significativa en la integridad de los datos genòmicos de *Mycobacterium Tuberculosis* tras el procesamiento con Trimmomatic. En los datos crudos se observaron tasas de error (% Failed) de hasta el 36% (SRR36403484), las cuales se redujeron a un 18% tras retirar bases de baja calidad y adaptado. El porcentaje de Guanina-Citosina (%GC) se mantuvo entre un rango de 64% y 66% caracterìstico de esta cepa. Ademas, se redujeron las longitudes promedio de las lecturas luego de su procesamiento evidenciando una limpieza selectiva de los extremos 3' resultando en un porcentaje mìnimo de lecturas eliminadas lo que garantiza una cobertura robusta para el analisis filogenetico. Por ultimo, se observó una variabilidad significativa en los niveles de duplicación de secuencias (% Dups), oscilando desde un 10.5% hasta un 81.8% en la muestra SRR36403484.
 
 **Figura 2**  
 
@@ -75,7 +75,7 @@ Reporte de MultiQC de secuencias crudas de *Mycobacterium Tuberculosis*
 **Figura 3**  
 Reporte de MultiQC de secuencias reprocesadas en Trimmomatic de *Mycobacterium Tuberculosis*  
 <img src="resultados/imagenes/Resultados MultiQC.jpg " alt="MultiqC trimmed" width="100%">    
-En la figura 4, se observa 
+En la figura 4 y 5, se observò la comparativa la calidad entre los datos crudos y procesados de una de las muestras SRR26387480 donde se evidencio una optimizacion de lecturas, y que el valor de calidad Phred se mantiene por encima de Q30 garantizando una identificaciòn de nucleòtidos superior al 99.9%.    
 
 **Figura 4**  
 Reporte de calidad FastQC de una secuencia cruda  
