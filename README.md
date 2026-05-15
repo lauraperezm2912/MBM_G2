@@ -6,20 +6,17 @@
 *Guzman Genesis  
 
 ## Objetivo
-Realizar un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* obtenidas de cohortes geográficamente diversas (Uganda, Rusia ,India, Argentina y EE. UU.), con el fin de reconstruir su historia evolutiva mediante filogenia.  
-
+Realizar un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* obtenidas de cohortes geográficamente diversas (Uganda, Rusia ,India y EE. UU.), con el fin de reconstruir su historia evolutiva mediante filogenia.
 ## Dataset
 datasets download genome accession GCF_000195955.2 --include gff3,rna,cds,protein,genome,seq-report (genome reference)
-Datasets de pacientes ubicados en diversos países y regiones, incluyendo Uganda, Argentina y la India, así como en ciudades y estados específicos como Moscú, San Petersburgo y Texas.
+Datasets de pacientes ubicados en diversos países y regiones, incluyendo Uganda y la India, así como en ciudades y estados específicos como Moscú, San Petersburgo y Texas.
 
 Paciente ubicación Uganda: SRR38304207  
 Paciente ubicación Moscú: SRR38388669  
 Paciente ubicación San Petersburgo: SRR26387480  
 Paciente ubicación India: SRR36403484  
-Paciente ubicación Argentina: SRR38405735  
+Paciente ubicación Texas: SRR38510712   
 
-## Bibliografia
-Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
 ## Flujo de Trabajo
 ```mermaid
 graph TB
@@ -30,7 +27,7 @@ graph TB
     classDef output fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#000,stroke-dasharray: 5 5;
 
     %% Nivel 1: Entrada
-    Raw[<b>Data Input</b><br/>Lecturas crudas FASTQc<br/>Uganda, Rusia, India, Argentina, USA]]:::input
+    Raw[<b>Entrada de datos</b><br/> NCBI: Lecturas crudas FASTQ<br/>Uganda, Rusia, India, Argentina, USA]:::input
 
     %% Nivel 2: Calidad
     FQC(<b>Control de Calidad</b><br/>FastQC):::process
@@ -56,8 +53,12 @@ graph TB
     Map --> SAM
     SAM --> VCF
     VCF --> Phylo
-    Phylo --> Tree
+    Phylo --> Tree  
+   
 ```
+## Resultados  
+## Bibliografía
+Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
 
 ## Resultados  
 MEGA_tree_imagen..png
