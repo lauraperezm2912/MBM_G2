@@ -108,7 +108,13 @@ En la figura 8, se obtuvo en el árbol filogenético un clado sólido con valor 
 **Figura 8**  
 Árbol Filogenético de *Mycobacterium Tuberculosis*  
 <img src="resultados/imagenes/MEGA_tree_imagen..png " alt="Árbol Filogenético Tuberculosis" width="100%">  
-## 5. Discusión
+## 5. Discusión  
+El análisis de calidad posprocesamiento en las Figuras 3 y 5 evidencia una reducción en la longitud promedio de las lecturas. Sin embargo, esta pérdida de datos es un compromiso técnico (trade-off) necesario y beneficioso. Al emplear el filtrado por ventana deslizante SLIDINGWINDOW, se eliminaron selectivamente las colas 3' de baja calidad que típicamente decaen en los ciclos finales de la secuenciación. Mantener un valor Phred superior a Q30 garantiza una exactitud del 99.9% en la identificación de cada base. En el contexto de este estudio filogenético, esta rigurosidad es indispensable, puesto que la reconstrucción evolutiva depende de la identificación de polimorfismos de nucleótido único (SNPs) reales; una calidad inferior habría introducido falsos positivos biológicos.
+
+La consistencia del porcentaje de Guanina-Citosina (64% - 66%) a través de todas las muestras analizadas actúa como un control de calidad biológico, dado que este rango es la firma genómica característica de *Mycobacterium tuberculosis*. Por otro lado, la alta variabilidad en los niveles de duplicación de secuencias alcanzando hasta un 81.8%, es un fenómeno técnico esperado en la secuenciación de genomas bacterianos pequeños sometidos a amplificación por PCR durante la generación de librerías. Aunque las lecturas duplicadas no afectan directamente la calidad base por base, este hallazgo subraya la necesidad de implementar pasos posteriores de desduplicación (como el uso de markdup en Samtools) antes de la llamada de variantes para evitar sesgos en la profundidad de cobertura (coverage).
+
+Las fluctuaciones observadas en el contenido de bases de los primeros nucleótidos (Figura 6) son un sesgo de composición característico de las plataformas de secuenciación Illumina, frecuentemente asociado al uso de hexámeros aleatorios durante la preparación de la librería genómica. La decisión metodológica de aplicar el parámetro HEADCROP:15 en Trimmomatic (Figura 7) se justifica plenamente al lograr estabilizar la proporción de bases. Esto es un paso crítico, ya que mantener este ruido técnico en los extremos 5' habría provocado errores sistemáticos durante el alineamiento con BWA-MEM, reduciendo la tasa de mapeo contra el genoma de referencia de M. tuberculosis
+
 El análisis filogenético evidenció diferencias en el grado de relación genética entre los aislados geográficos de Mycobacterium tuberculosis y la cepa de referencia H37Rv, lo que refleja distintos niveles de divergencia evolutiva acumulada en cada muestra.
 
 Las secuencias provenientes de San Petersburgo y Texas se agruparon dentro de un mismo clado con un valor bootstrap de 100, indicando un soporte estadístico altamente confiable. Esta asociación sugiere que ambos aislados comparten un mayor número de características genéticas y posiblemente un origen evolutivo cercano. Además, la menor longitud de sus ramas en comparación con otras muestras indica una acumulación reducida de cambios nucleotídicos desde el ancestro común, lo que respalda su estrecha relación filogenética y una distancia evolutiva moderada respecto a H37Rv.
@@ -119,5 +125,13 @@ Por otro lado, las muestras de Moscú e India se localizaron más próximas a la
 
 *por si les sirve para discu el porque las fluctuaciones al inicio de las secuencias: En los datos crudos, se observan fluctuaciones pronunciadas en los primeros 10 nucleótidos y un desbalance abrupto al final de la lectura (posición 110 bp), lo cual es indicativo de la presencia de adaptadores y sesgos técnicos de la secuenciación.*
 ## 6. Conclusiones  
+La aplicación de filtros rigurosos de calidad (SLIDINGWINDOW) y la eliminación de sesgos de composición en los extremos 5' (HEADCROP:15) mediante Trimmomatic son pasos indispensables. Aunque implican una reducción en la longitud de las lecturas, garantizan una exactitud superior al 99.9% (Phred > Q30) y eliminan ruidos técnicos propios de Illumina. Esto asegura que los SNPs identificados posteriormente sean variaciones biológicas reales y no artefactos de secuenciación.
+
+La constancia en el contenido de GC (64% - 66%) valida exitosamente la identidad biológica de todas las muestras analizadas como Mycobacterium tuberculosis. Asimismo, la detección de altas tasas de duplicación por PCR resalta la importancia de incluir protocolos de desduplicación en el flujo de trabajo para garantizar un análisis de cobertura preciso.
+
+Una estrecha relación entre San Petersburgo y Texas concluye con un alto nivel de certeza estadística (Bootstrap 100) que los aislados de San Petersburgo y Texas comparten un ancestro evolutivo común y reciente, presentando una divergencia genética moderada y una alta similitud en sus perfiles mutacionales.
+
+Alta divergencia en el linaje de Uganda, la cepa proveniente de Uganda representa el aislado con mayor distancia genética del estudio. La significativa acumulación de variaciones moleculares sugiere que este linaje ha experimentado un proceso de evolución independiente, posiblemente impulsado por presiones selectivas locales en su región de origen.
+
 ## 7. Referencias bibliográficas  
 Doughty, EL, Sergeant, MJ, Adetifa, I., Antonio, M., Pallen, MJ y Clark, TG (2022). Secuenciación de ADN metagenómico para cuantificar el ADN de Mycobacterium tuberculosis y diagnosticar la tuberculosis . Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
