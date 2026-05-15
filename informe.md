@@ -71,30 +71,36 @@ En las figuras 2 y 3,se obtuvo un reporte comparativo de MultiQC de las cinco di
 
 **Figura 2**    
 Reporte de MultiQC de secuencias crudas de *Mycobacterium Tuberculosis*     
+
 <img src="resultados/imagenes/Resultados MultiQC crudos.jpg " alt="MultiqC crudo" width="100%">    
 
 **Figura 3**  
 Reporte de MultiQC de secuencias reprocesadas en Trimmomatic de *Mycobacterium Tuberculosis*  
+
 <img src="resultados/imagenes/Resultados MultiQC.jpg " alt="MultiqC trimmed" width="100%">   
 
 En la figura 4 y 5, se observó la comparativa la calidad entre los datos crudos y procesados de una de las muestras SRR26387480 donde se evidenció una optimización de lecturas, y que el valor de calidad Phred se mantiene por encima de Q30 garantizando una identificación de nucleótidos superior al 99.9%.    
 
 **Figura 4**  
 Reporte de calidad FastQC de una secuencia cruda  
+
 <img src="resultados/imagenes/Fastqc crudo stadistics.jpg " alt="FastQC crudo" width="60%">  
 
 **Figura 5**  
 Reporte de calidad FastQC de una secuencia sometida a Trimmomatic  
+
 <img src="resultados/imagenes/Fastqc trimmed stadistics.jpg " alt="FastQC trimmed" width="60%">  
 
 En la figura 6 y 7, se observa el contenido de secuencias por base antes y despues de Trimmomatic, evidenciando un cambio significativo tras su procesamiento al existir fluctuaciones en los primeros 15 nucleótidos y al final obteniendo proporciones de bases constantes y paralelas a lo largo de la lectura obteniendo así datos libres de ruidos para su posterior alineamiento.  
 
 **Figura 6**    
 Contenido de secuencia por base de una secuencia cruda    
+
 <img src="resultados/imagenes/Sequence content crudo.jpg " alt="FastQC contenido crudo" width="60%">  
 
 **Figura 7**  
 Contenido de secuencia por base de una secuencia sometida a Trimmomatic    
+
 <img src="resultados/imagenes/Sequence content trimmed 2.jpg " alt="FastQC contenido trimmed" width="60%">    
 
 En la figura 8, se obtuvo en el árbol filogenético un clado sólido con valor de bootstrap de 100 que incluye las muestras de San Petersburgo, Uganda y Texas. Mientras que, las muestras de Moscú e India tienen un valor de 63 lo que sugiere una incertidumbre estadística. Además, se observa que las muestras más emparentadas son San Petersburgo y Texas al compartir un nodo común. A su vez, se observó que Uganda tiene la rama horizontal más larga lo que sugiere una mayor cantidad de variaciones genéticas respecto al ancestro común. En tanto que, Moscú e India tienen ramas muy cortas y cercanas al eje principal lo que indica que son más similares genéticamente a la cepa ancestral.   
@@ -102,7 +108,6 @@ En la figura 8, se obtuvo en el árbol filogenético un clado sólido con valor 
 **Figura 8**  
 Árbol Filogenético de *Mycobacterium Tuberculosis*  
 <img src="resultados/imagenes/MEGA_tree_imagen..png " alt="Árbol Filogenético Tuberculosis" width="100%">  
-
 ## 5. Discusión  
 *por si les sirve para discu el porque las fluctuaciones al inicio de las secuencias: En los datos crudos, se observan fluctuaciones pronunciadas en los primeros 10 nucleótidos y un desbalance abrupto al final de la lectura (posición 110 bp), lo cual es indicativo de la presencia de adaptadores y sesgos técnicos de la secuenciación.*
 ## 6. Conclusiones  
