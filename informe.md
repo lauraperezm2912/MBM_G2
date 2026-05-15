@@ -22,6 +22,9 @@ A pesar de los avances en secuenciación y análisis genómico, todavía existen
 
 ## 3. Metodología  
 El análisis bioinformático se inició con un riguroso control de calidad de las lecturas crudas en formato FASTQ mediante FastQC, seguido de un procesamiento masivo con Trimmomatic empleando el parámetro HEADCROP:15 para eliminar sesgos de composición en el inicio de las secuencias, además de filtros de calidad por ventana deslizante (SLIDINGWINDOW:4:20). Las lecturas filtradas se alinearon contra el genoma de referencia de Mycobacterium tuberculosis H37Rv utilizando el algoritmo BWA-MEM. Tras el procesamiento de los archivos de alineamiento con Samtools, se procedió a la identificación de polimorfismos de nucleótido único (SNPs) mediante BCFtools. Finalmente, a partir de la matriz de variantes obtenida, se realizó la reconstrucción filogenética por el método de Máxima Verosimilitud utilizando IQ-TREE con 1000 réplicas de bootstrap, permitiendo así la inferencia de las relaciones evolutivas y la estructura poblacional de las muestras provenientes de las cinco cohortes geográficas en estudio y la cepa de referencia. Por último, se visualizó el árbol evolutivo en MegaX  
+**Figura 1**
+Diagrama de flujo de metodologìa
+
 ```mermaid
 graph TB
     %% Definición de Estilos (Tus colores originales)
@@ -62,6 +65,35 @@ graph TB
 ```
 
 ## 4. Resultados  
+
+En la figura 2 
+
+**Figura 2**  
+
+Reporte de MultiQC de secuencias crudas de *Mycobacterium Tuberculosis*     
+<img src="resultados/imagenes/Resultados MultiQC crudos.jpg " alt="MultiqC crudo" width="100%">    
+**Figura 3**  
+Reporte de MultiQC de secuencias reprocesadas en Trimmomatic de *Mycobacterium Tuberculosis*  
+<img src="resultados/imagenes/Resultados MultiQC.jpg " alt="MultiqC trimmed" width="100%">    
+En la figura 4, se observa 
+
+**Figura 4**  
+Reporte de calidad FastQC de una secuencia cruda  
+<img src="resultados/imagenes/Fastqc crudo stadistics.jpg " alt="FastQC crudo" width="100%">  
+**Figura 5**  
+Reporte de calidad FastQC de una secuencia sometida a Trimmomatic  
+<img src="resultados/imagenes/Fastqc trimmed stadistics.jpg " alt="FastQC trimmed" width="100%">  
+**Figura 6**  
+Contenido de secuencia por base de una secuencia cruda  
+<img src="resultados/imagenes/Sequence content crudo.jpg " alt="FastQC contenido crudo" width="100%">  
+**Figura 7**  
+Contenido de secuencia por base de una secuencia sometida a Trimmomatic  
+<img src="resultados/imagenes/Sequence content trimmed.jpg " alt="FastQC contenido trimmed" width="100%">
+
+
+
+
+
 
 En la figura .... se obtuvo en el árbol filogenético un clado sólido con valor de bootstrap de 100 que incluye las muestras de San Petersburgo, Uganda y Texas. Mientras que, las muestras de Moscú e India tienen un valor de 63 lo que sugiere una incertidumbre estadística. Además, se observa que las muestras más emparentadas son San Petersburgo y Texas al compartir un nodo común. A su vez, se observó que Uganda tiene la rama horizontal más larga lo que sugiere una mayor cantidad de variaciones genéticas respecto al ancestro común. En tanto que, Moscú e India tienen ramas muy cortas y cercanas al eje principal lo que indica que son más similares genéticamente a la cepa ancestral. 
 
