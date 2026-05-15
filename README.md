@@ -43,7 +43,7 @@ graph TB
 
     %% Nivel 5: Resultado
     Phylo(<b>Filogenia</b><br/>IQ-TREE<br/>GTR+G):::process
-    Tree{{<b>Salida Final</b><br/>Árbol Evolutivo<br/> Visualización: iTOL / FigTree}}:::output
+    Tree{{<b>Salida Final</b><br/>Árbol Evolutivo<br/> Visualización: MegaX}}:::output
 
     %% Flujo Vertical
     Raw --> FQC
