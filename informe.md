@@ -24,7 +24,7 @@ A pesar de los avances en secuenciación y análisis genómico, todavía existen
 El flujo de análisis genómico comenzó con la evaluación de calidad de las lecturas crudas en formato FASTQ mediante FastQC. Posteriormente, la limpieza de los datos se realizó con Trimmomatic, aplicando un recorte en el extremo 5' HEADCROP:15 para eliminar sesgos de composición iniciales, acompañado de un filtro por ventanas deslizantes SLIDINGWINDOW:4:20. Las lecturas de alta calidad resultantes fueron mapeadas contra el genoma de referencia de Mycobacterium tuberculosis cepa de referncia  H37Rv utilizando el algoritmo BWA-MEM. Estos alineamientos fueron ordenados, indexados y convertidos a formato BAM mediante Samtools, preparando los datos para el llamado de polimorfismos de nucleótido único (SNPs) a través de BCFtools. Con la matriz de variantes generada, se llevó a cabo la reconstrucción filogenética por Inferencia de Máxima Verosimilitud en IQ-TREE, aplicando el modelo de sustitución GTR+G y un soporte de 1000 réplicas de bootstrap. Esto permitió establecer las relaciones evolutivas entre las cohortes geográficas y la cepa de referencia. Finalmente, la visualización y edición del árbol evolutivo se realizó en Mega12
 
 **Figura 1**
-Diagrama de flujo de metodologìa
+Diagrama de flujo de metodología
 
 ```mermaid
 graph TB
