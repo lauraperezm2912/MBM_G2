@@ -108,7 +108,15 @@ En la figura 8, se obtuvo en el árbol filogenético un clado sólido con valor 
 **Figura 8**  
 Árbol Filogenético de *Mycobacterium Tuberculosis*  
 <img src="resultados/imagenes/MEGA_tree_imagen..png " alt="Árbol Filogenético Tuberculosis" width="100%">  
-## 5. Discusión  
+## 5. Discusión
+El análisis filogenético evidenció diferencias en el grado de relación genética entre los aislados geográficos de Mycobacterium tuberculosis y la cepa de referencia H37Rv, lo que refleja distintos niveles de divergencia evolutiva acumulada en cada muestra.
+
+Las secuencias provenientes de San Petersburgo y Texas se agruparon dentro de un mismo clado con un valor bootstrap de 100, indicando un soporte estadístico altamente confiable. Esta asociación sugiere que ambos aislados comparten un mayor número de características genéticas y posiblemente un origen evolutivo cercano. Además, la menor longitud de sus ramas en comparación con otras muestras indica una acumulación reducida de cambios nucleotídicos desde el ancestro común, lo que respalda su estrecha relación filogenética y una distancia evolutiva moderada respecto a H37Rv.
+
+En contraste, la muestra de Uganda presentó la rama filogenética más extensa, indicando una mayor distancia genética dentro del árbol. Este comportamiento sugiere una acumulación más significativa de variaciones moleculares a lo largo del tiempo, lo que podría asociarse con procesos evolutivos independientes, presión selectiva regional o particularidades del linaje circulante en dicha zona geográfica. Aunque Uganda comparte un ancestro común con San Petersburgo y Texas, su separación dentro del árbol demuestra un proceso de divergencia más marcado.
+
+Por otro lado, las muestras de Moscú e India se localizaron más próximas a la secuencia de referencia H37Rv, lo que indica una menor distancia evolutiva y una conservación genética relativamente mayor. Sin embargo, el soporte bootstrap de 63 asociado a este agrupamiento representa una confianza estadística moderada, por lo que la relación filogenética observada debe interpretarse con precaución. A pesar de ello, ambas muestras parecen mantener una similitud genética más cercana a la cepa ancestral en comparación con Uganda.
+
 *por si les sirve para discu el porque las fluctuaciones al inicio de las secuencias: En los datos crudos, se observan fluctuaciones pronunciadas en los primeros 10 nucleótidos y un desbalance abrupto al final de la lectura (posición 110 bp), lo cual es indicativo de la presencia de adaptadores y sesgos técnicos de la secuenciación.*
 ## 6. Conclusiones  
 ## 7. Referencias bibliográficas  
