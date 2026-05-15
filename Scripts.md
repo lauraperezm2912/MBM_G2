@@ -26,7 +26,7 @@ unzip ncbi dataset
 ```
 
 ---  
-## PARTE 2 — Control de calidad con FastQC
+## PARTE 2 - Control de calidad con FastQC
 ### Ejecutar FastQC
 Evaluaciòn de control de calidad de mùltiples archivos fastq.gz a la vez
 ```bash
@@ -41,7 +41,7 @@ ls
 ```
 ---  
 
-## PARTE 3 — Trimming con Trimmomatic  
+## PARTE 3 - Trimming con Trimmomatic  
 
 ```bash
 for file in *.fastq.gz; do 
@@ -56,14 +56,14 @@ done
 ```
 ---  
 
-## PARTE 4 Control de calidad con FastQC en secuencias trimadas  
+## PARTE 4 - Control de calidad con FastQC en secuencias trimadas  
 
 ```bash
 fastqc -t 4 *_trimmed.fastq.gz
 ```
 ---   
 
-## PARTE 5 Reporte de MultiQC antes y despues de Trimmomatic
+## PARTE 5 - Reporte de MultiQC antes y despues de Trimmomatic
 ```bash
 multiqc /home/lauraperez/tuberculosis/reportes_calidad/ --ignore "*trimmed*" -n multiqc_CRUDOS.html -f -t simple --flat
 ```
@@ -72,7 +72,8 @@ multiqc /home/lauraperez/tuberculosis/reportes_calidad/ -f -t simple --flat
 ```
 ---
 
-## PARTE 6 Alineamiento de lecturas  
+## PARTE 6 - Alineamiento de lecturas  
+
 ### Reubicaciòn de genoma de referencia y cambio de nombre (opcional)
 Mover archivo de genoma de referencia H37Rv a carpeta principal tuberculosis y cambio de nombre por referencia.fna 
 ```bash
@@ -95,7 +96,7 @@ done
 ```
 ---
 
-## PARTE 7 Conversiòn SAM a BAM
+## PARTE 7 - Conversiòn SAM a BAM
 ```bash
 for samfile in *.sam; do
     sample="${samfile%.sam}";
@@ -112,7 +113,7 @@ rm *.sam
 ```
 ---
 
-## PARTE 8 Llamado de variantes
+## PARTE 8 - Llamado de variantes
 ```bash
 for bamfile in *_sorted.bam; do
     sample="${bamfile%_sorted.bam}";
@@ -137,7 +138,7 @@ done
 ```
 ---
 
-## PARTE 9 Consolidaciòn de variantes y matriz genòmica
+## PARTE 9 - Consolidaciòn de variantes y matriz genòmica
 
 ### Unión de todos los archivos VCF en una matriz única e indexar
 ```bash
@@ -160,7 +161,7 @@ gunzip -c matriz_solo_snps.vcf.gz > matriz_final.vcf
 snp-sites -p -o matriz_snps.phy matriz_final.vcf
 ```
 ---
-## PARTE 10 Generación del Alineamiento de Consenso con Referencia
+## PARTE 10 - Generación del Alineamiento de Consenso con Referencia
 
 ### Inclusión manual de la Referencia H37Rv en el archivo final
 ```bash
@@ -179,7 +180,7 @@ done
 ```
 ---
 
-## PARTE 11 Elaboraciòn àrbol filogenètico final
+## PARTE 11 - Elaboraciòn àrbol filogenètico final
 
 ### Extracción de la matriz de SNPs definitiva incluyendo la referencia
 ```bash
