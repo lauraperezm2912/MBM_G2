@@ -121,4 +121,12 @@ Por otro lado, las muestras de Moscú e India se localizaron más próximas a la
 ## 6. Conclusiones  
 En conjunto, los resultados filogenéticos evidencian que las muestras de San Petersburgo y Texas presentan la relación genética más estrecha, formando un clado con alto soporte estadístico (bootstrap = 100), lo que indica una elevada similitud evolutiva entre ambas. En contraste, la muestra de Uganda mostró la mayor divergencia genética, reflejada en la longitud de su rama filogenética y asociada a una mayor acumulación de variaciones respecto al ancestro común. Por su parte, las muestras de Moscú e India se mantuvieron más cercanas a la secuencia de referencia H37Rv, sugiriendo una menor distancia evolutiva, aunque con un soporte estadístico moderado. Adicionalmente, la estabilidad del contenido GC, la calidad Phred superior a Q30 y la depuración realizada mediante Trimmomatic confirman la confiabilidad de los datos obtenidos, respaldando que las diferencias observadas corresponden a variaciones biológicas reales y no a errores derivados del procesamiento bioinformático.
 ## 7. Referencias bibliográficas  
-Doughty, EL, Sergeant, MJ, Adetifa, I., Antonio, M., Pallen, MJ y Clark, TG (2022). Secuenciación de ADN metagenómico para cuantificar el ADN de Mycobacterium tuberculosis y diagnosticar la tuberculosis . Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
+Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120. https://doi.org/10.1093/bioinformatics/btu170
+
+Comas, I., & Gagneux, S. (2009). The past and future of tuberculosis research. PLoS Pathogens, 5(10), e1000600. https://doi.org/10.1371/journal.ppat.1000600
+
+Coscolla, M., & Gagneux, S. (2014). Consequences of genomic diversity in Mycobacterium tuberculosis. Seminars in Immunology, 26(6), 431–444. https://doi.org/10.1016/j.smim.2014.09.012
+
+Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). Metagenomic DNA sequencing for quantification of Mycobacterium tuberculosis DNA and tuberculosis diagnosis. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x
+
+Kumar, S., Stecher, G., Li, M., Knyaz, C., & Tamura, K. (2018). MEGA X: Molecular evolutionary genetics analysis across computing platforms. Molecular Biology and Evolution, 35(6), 1547–1549. https://doi.org/10.1093/molbev/msy096
