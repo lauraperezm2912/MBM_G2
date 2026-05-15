@@ -60,3 +60,9 @@ graph TB
 ## Bibliografía
 Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
 
+## Resultados  
+MEGA_tree_imagen..png
+<img src="resultados/imagenes/MEGA_tree_imagen..png " alt="Fin del formato de README" width="30%">
+
+## Contribucion individual
+##  Cómo reproducir (scripts)
