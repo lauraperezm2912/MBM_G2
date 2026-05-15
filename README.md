@@ -18,7 +18,25 @@ Paciente ubicación India: SRR36403484
 Paciente ubicación Texas: SRR38510712   
 
 ## Flujo de Trabajo  
-El análisis bioinformático se inició con un riguroso control de calidad de las lecturas crudas en formato FASTQ mediante FastQC, seguido de un procesamiento masivo con Trimmomatic empleando el parámetro HEADCROP:15 para eliminar sesgos de composición en el inicio de las secuencias, además de filtros de calidad por ventana deslizante (SLIDINGWINDOW:4:20). Las lecturas filtradas se alinearon contra el genoma de referencia de Mycobacterium tuberculosis H37Rv utilizando el algoritmo BWA-MEM. Tras el procesamiento de los archivos de alineamiento con Samtools, se procedió a la identificación de polimorfismos de nucleótido único (SNPs) mediante BCFtools. Finalmente, a partir de la matriz de variantes obtenida, se realizó la reconstrucción filogenética por el método de Máxima Verosimilitud utilizando IQ-TREE con 1000 réplicas de bootstrap, permitiendo así la inferencia de las relaciones evolutivas y la estructura poblacional de las muestras provenientes de las cinco cohortes geográficas en estudio y la cepa de referencia. Por último, se visualizó el árbol evolutivo en MegaX  
+### 1. Obtención de Datos de Repositorios Públicos  
+
+Se realizó la descarga de las secuencias crudas en formato FASTQ desde el NCBI Sequence Read Archive (SRA) mediante el uso de SRA Toolkit, junto con la recuperación del genoma de referencia H37Rv desde la base de datos de nucleótidos del NCBI.  
+
+### 2. Análisis de Calidad y Pre-procesamiento
+
+Se efectuó un diagnóstico inicial de las lecturas para identificar adaptadores y sesgos técnicos, procediendo luego a una limpieza profunda con Trimmomatic para eliminar bases de baja calidad (Phred < Q20), obteniendo un set de datos optimizado y libre de impurezas para el análisis genómico.  
+
+### 3. Alineamiento Genómico y Gestión de Datos
+
+Las lecturas procesadas fueron mapeadas contra el genoma de referencia de *Mycobacterium tuberculosis*, transformando posteriormente los resultados a formatos binarios ordenados por coordenadas, y facilitando la búsqueda de mutaciones.  
+
+### 4. Identificación y Filtrado de Variantes (SNPs)
+
+Se detectò variantes genómicas aplicando filtros de alta rigurosidad con el fin de garantizar que los polimorfismos de nucleótido único (SNPs) detectados fueran biológicamente reales y no errores de secuenciación.  
+
+### 5. Consolidación de Matriz y Reconstrucción Filogenética
+
+Se integraron las variantes de todas las muestras en una matriz maestra de SNPs para generar secuencias consenso;junto con la cepa de referencia para enraizar el árbol filogenético, y se definiò las relaciones evolutivas.
 
 ## Resultados  
 El procesamiento bioinformático mediante Trimmomatic optimizó significativamente la integridad de los datos de las cinco muestras geográficas, reduciendo las tasas de error iniciales del 36% al 18% tras la remoción técnica de adaptadores y bases de baja calidad. Esta limpieza fue validada por la estabilidad del contenido de Guanina-Citosina entre el 64% y 66%, valor característico del genoma de M. tuberculosis, y por una calidad Phred superior a Q30 que garantiza una precisión en la identificación de nucleótidos mayor al 99.9%. Asimismo, el análisis del contenido de secuencias por base demostró la eliminación de ruidos y fluctuaciones posicionales, logrando proporciones constantes y paralelas que resultan en datos homogéneos y aptos para un alineamiento genómico robusto y confiable.
