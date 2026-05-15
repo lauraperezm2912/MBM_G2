@@ -56,8 +56,10 @@ graph TB
     Phylo --> Tree  
    
 ```
-## Resultados   
-<img src="MEGA_tree_imagen..png" alt="Árbol Filogenético Tuberculosis" width="100%">  
+## Resultados  
+<img src="resultados/imagenes/MEGA_tree_imagen..png " alt="Árbol Filogenético Tuberculosis" width="100%">  
 
-## Bibliografía  
+## Bibliografía
 Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). *Metagenomic DNA sequencing to quantify Mycobacterium tuberculosis DNA and diagnose tuberculosis*. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
+
+
