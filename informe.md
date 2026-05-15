@@ -1,12 +1,12 @@
 # Proyecto: Metagenomic DNA sequencing to quantify *Mycobacterium tuberculosis* DNA and diagnose tuberculosis  
 ## Integrantes  
-*Pérez Laura  
-*Mindiola Edwar  
-*Baquedano Genesis  
-*Guzman Genesis  
+* Pérez Laura  
++ Mindiola Edwar  
+- Baquedano Genesis  
+* Guzman Genesis  
 
 ## Objetivo
-Realizar un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* obtenidas de cohortes geográficamente diversas (Uganda, Rusia ,India, Argentina y EE. UU.), con el fin de reconstruir su historia evolutiva mediante filogenia.  
+Realizar un análisis comparativo de variantes genómicas en muestras de *Mycobacterium tuberculosis* obtenidas de cohortes geográficamente diversas (Uganda, Rusia ,India y EE. UU.), con el fin de reconstruir su historia evolutiva mediante filogenia.  
 
 ## 1. Introducción
 La tuberculosis (TB) es una de las enfermedades más antiguas y mortales, causada por el bacilo *Mycobacterium tuberculosis* (Mtb) que afecta a nivel mundial principalmente a migrantes, personas privadas de la libertad, personas que se encuentran en las fronteras y los países de ingresos bajos y medios. En la actualidad la TB constituye la segunda causa de muerte por un solo agente infeccioso tras la COVID-19. Por lo tanto, la tuberculosis es una enfermedad infecciosa  de salud pública a nivel mundial. La capacidad de esta bacteria para adaptarse y presentar variaciones genéticas entre distintas poblaciones ha despertado gran interés en el área de la bioinformática y la genómica comparativa. El estudio de variantes genómicas permite comprender mejor la diversidad genética del microorganismo, así como sus procesos de evolución y dispersión en diferentes regiones geográficas.
@@ -21,7 +21,8 @@ La tuberculosis sigue siendo una de las enfermedades infecciosas con mayor impac
 A pesar de los avances en secuenciación y análisis genómico, todavía existen limitaciones para comprender cómo las variantes genéticas de *Mycobacterium tuberculosis* se distribuyen y evolucionan entre diferentes poblaciones humanas. Por ello, resulta importante comparar muestras provenientes de países y regiones, como: Uganda, Argentina y la India, así como en ciudades y estados específicos como Moscú, San Petersburgo y Texas, mediante herramientas bioinformáticas y análisis filogenéticos que permitan reconstruir su historia evolutiva y analizar la diversidad genética de este microorganismo.
 
 ## 3. Metodología  
-El análisis bioinformático se inició con un riguroso control de calidad de las lecturas crudas en formato FASTQ mediante FastQC, seguido de un procesamiento masivo con Trimmomatic empleando el parámetro HEADCROP:15 para eliminar sesgos de composición en el inicio de las secuencias, además de filtros de calidad por ventana deslizante (SLIDINGWINDOW:4:20). Las lecturas filtradas se alinearon contra el genoma de referencia de Mycobacterium tuberculosis H37Rv utilizando el algoritmo BWA-MEM. Tras el procesamiento de los archivos de alineamiento con Samtools, se procedió a la identificación de polimorfismos de nucleótido único (SNPs) mediante BCFtools. Finalmente, a partir de la matriz de variantes obtenida, se realizó la reconstrucción filogenética por el método de Máxima Verosimilitud utilizando IQ-TREE con 1000 réplicas de bootstrap, permitiendo así la inferencia de las relaciones evolutivas y la estructura poblacional de las muestras provenientes de las cinco cohortes geográficas en estudio y la cepa de referencia. Por último, se visualizó el árbol evolutivo en MegaX  
+El análisis bioinformático se inició con un riguroso control de calidad de las lecturas crudas en formato FASTQ mediante FastQC, seguido de un procesamiento masivo con Trimmomatic empleando el parámetro HEADCROP:15 para eliminar sesgos de composición en el inicio de las secuencias, además de filtros de calidad por ventana deslizante (SLIDINGWINDOW:4:20). Las lecturas filtradas se alinearon contra el genoma de referencia de Mycobacterium tuberculosis H37Rv utilizando el algoritmo BWA-MEM. Tras el procesamiento de los archivos de alineamiento con Samtools, se procedió a la identificación de polimorfismos de nucleótido único (SNPs) mediante BCFtools. Finalmente, a partir de la matriz de variantes obtenida, se realizó la reconstrucción filogenética por el método de Máxima Verosimilitud utilizando IQ-TREE con 1000 réplicas de bootstrap, permitiendo así la inferencia de las relaciones evolutivas y la estructura poblacional de las muestras provenientes de las cinco cohortes geográficas en estudio y la cepa de referencia. Por último, se visualizó el árbol evolutivo en MegaX.  
+
 **Figura 1**
 Diagrama de flujo de metodologìa
 
@@ -71,6 +72,7 @@ En las figuras 2 y 3,se obtuvo un reporte comparativo de MultiQC de las cinco di
 **Figura 2**    
 Reporte de MultiQC de secuencias crudas de *Mycobacterium Tuberculosis*     
 <img src="resultados/imagenes/Resultados MultiQC crudos.jpg " alt="MultiqC crudo" width="100%">    
+
 **Figura 3**  
 Reporte de MultiQC de secuencias reprocesadas en Trimmomatic de *Mycobacterium Tuberculosis*  
 <img src="resultados/imagenes/Resultados MultiQC.jpg " alt="MultiqC trimmed" width="100%">   
@@ -79,19 +81,21 @@ En la figura 4 y 5, se observó la comparativa la calidad entre los datos crudos
 
 **Figura 4**  
 Reporte de calidad FastQC de una secuencia cruda  
-<img src="resultados/imagenes/Fastqc crudo stadistics.jpg " alt="FastQC crudo" width="100%">  
+<img src="resultados/imagenes/Fastqc crudo stadistics.jpg " alt="FastQC crudo" width="60%">  
+
 **Figura 5**  
 Reporte de calidad FastQC de una secuencia sometida a Trimmomatic  
-<img src="resultados/imagenes/Fastqc trimmed stadistics.jpg " alt="FastQC trimmed" width="100%">  
+<img src="resultados/imagenes/Fastqc trimmed stadistics.jpg " alt="FastQC trimmed" width="60%">  
 
 En la figura 6 y 7, se observa el contenido de secuencias por base antes y despues de Trimmomatic, evidenciando un cambio significativo tras su procesamiento al existir fluctuaciones en los primeros 15 nucleótidos y al final obteniendo proporciones de bases constantes y paralelas a lo largo de la lectura obteniendo así datos libres de ruidos para su posterior alineamiento.  
 
 **Figura 6**    
 Contenido de secuencia por base de una secuencia cruda    
-<img src="resultados/imagenes/Sequence content crudo.jpg " alt="FastQC contenido crudo" width="100%">  
+<img src="resultados/imagenes/Sequence content crudo.jpg " alt="FastQC contenido crudo" width="60%">  
+
 **Figura 7**  
 Contenido de secuencia por base de una secuencia sometida a Trimmomatic    
-<img src="resultados/imagenes/Sequence content trimmed.jpg " alt="FastQC contenido trimmed" width="100%">    
+<img src="resultados/imagenes/Sequence content trimmed 2.jpg " alt="FastQC contenido trimmed" width="60%">    
 
 En la figura 8, se obtuvo en el árbol filogenético un clado sólido con valor de bootstrap de 100 que incluye las muestras de San Petersburgo, Uganda y Texas. Mientras que, las muestras de Moscú e India tienen un valor de 63 lo que sugiere una incertidumbre estadística. Además, se observa que las muestras más emparentadas son San Petersburgo y Texas al compartir un nodo común. A su vez, se observó que Uganda tiene la rama horizontal más larga lo que sugiere una mayor cantidad de variaciones genéticas respecto al ancestro común. En tanto que, Moscú e India tienen ramas muy cortas y cercanas al eje principal lo que indica que son más similares genéticamente a la cepa ancestral.   
 
