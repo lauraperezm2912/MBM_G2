@@ -125,13 +125,27 @@ Por otro lado, las muestras de Moscú e India se localizaron más próximas a la
 
 *por si les sirve para discu el porque las fluctuaciones al inicio de las secuencias: En los datos crudos, se observan fluctuaciones pronunciadas en los primeros 10 nucleótidos y un desbalance abrupto al final de la lectura (posición 110 bp), lo cual es indicativo de la presencia de adaptadores y sesgos técnicos de la secuenciación.*
 ## 6. Conclusiones  
+
 La aplicación de filtros rigurosos de calidad (SLIDINGWINDOW) y la eliminación de sesgos de composición en los extremos 5' (HEADCROP:15) mediante Trimmomatic son pasos indispensables. Aunque implican una reducción en la longitud de las lecturas, garantizan una exactitud superior al 99.9% (Phred > Q30) y eliminan ruidos técnicos propios de Illumina. Esto asegura que los SNPs identificados posteriormente sean variaciones biológicas reales y no artefactos de secuenciación.
 
 La constancia en el contenido de GC (64% - 66%) valida exitosamente la identidad biológica de todas las muestras analizadas como *Mycobacterium tuberculosis*. Asimismo, la detección de altas tasas de duplicación por PCR resalta la importancia de incluir protocolos de desduplicación en el flujo de trabajo para garantizar un análisis de cobertura preciso.
+
+La aplicación de filtros rigurosos de calidad (SLIDINGWINDOW) y la eliminación de sesgos de composición en los extremos 5' (HEADCROP:15) mediante Trimmomatic son pasos indispensables. Aunque implican una reducción en la longitud de las lecturas, garantizan una exactitud superior al 99,9% (Phred > Q30) y eliminan ruidos técnicos propios de Illumina. Esto asegura que los SNP identificados posteriormente sean variaciones biológicas reales y no artefactos de secuenciación.
+
+La constancia en el contenido de GC (64% - 66%) valida exitosamente la identidad biológica de todas las muestras analizadas como Mycobacterium tuberculosis . Asimismo, la detección de altas tasas de duplicación por PCR resalta la importancia de incluir protocolos de desduplicación en el flujo de trabajo para garantizar un análisis de cobertura preciso.
+
 
 Una estrecha relación entre San Petersburgo y Texas concluye con un alto nivel de certeza estadística (Bootstrap 100) que los aislados de San Petersburgo y Texas comparten un ancestro evolutivo común y reciente, presentando una divergencia genética moderada y una alta similitud en sus perfiles mutacionales.
 
 Alta divergencia en el linaje de Uganda, la cepa proveniente de Uganda representa el aislado con mayor distancia genética del estudio. La significativa acumulación de variaciones moleculares sugiere que este linaje ha experimentado un proceso de evolución independiente, posiblemente impulsado por presiones selectivas locales en su región de origen.
 
 ## 7. Referencias bibliográficas  
-Doughty, EL, Sergeant, MJ, Adetifa, I., Antonio, M., Pallen, MJ y Clark, TG (2022). Secuenciación de ADN metagenómico para cuantificar el ADN de Mycobacterium tuberculosis y diagnosticar la tuberculosis . Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x 
+Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120. https://doi.org/10.1093/bioinformatics/btu170
+
+Comas, I., & Gagneux, S. (2009). The past and future of tuberculosis research. PLoS Pathogens, 5(10), e1000600. https://doi.org/10.1371/journal.ppat.1000600
+
+Coscolla, M., & Gagneux, S. (2014). Consequences of genomic diversity in Mycobacterium tuberculosis. Seminars in Immunology, 26(6), 431–444. https://doi.org/10.1016/j.smim.2014.09.012
+
+Doughty, E. L., Sergeant, M. J., Adetifa, I., Antonio, M., Pallen, M. J., & Clark, T. G. (2022). Metagenomic DNA sequencing for quantification of Mycobacterium tuberculosis DNA and tuberculosis diagnosis. Scientific Reports, 12, 17937. https://doi.org/10.1038/s41598-022-21244-x
+
+Kumar, S., Stecher, G., Li, M., Knyaz, C., & Tamura, K. (2018). MEGA X: Molecular evolutionary genetics analysis across computing platforms. Molecular Biology and Evolution, 35(6), 1547–1549. https://doi.org/10.1093/molbev/msy096
