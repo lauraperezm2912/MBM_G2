@@ -59,6 +59,9 @@ graph TB
     Phylo --> Tree
 ```
 
-## Resultados
+## Resultados  
+MEGA_tree_imagen..png
+<img src="resultados/imagenes/MEGA_tree_imagen..png " alt="Fin del formato de README" width="30%">
+
 ## Contribucion individual
 ##  Cómo reproducir (scripts)
