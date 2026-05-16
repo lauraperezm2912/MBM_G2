@@ -133,6 +133,7 @@ Una estrecha relación entre San Petersburgo y Texas concluye con un alto nivel 
 
 Alta divergencia en el linaje de Uganda, la cepa proveniente de Uganda representa el aislado con mayor distancia genética del estudio. La significativa acumulación de variaciones moleculares sugiere que este linaje ha experimentado un proceso de evolución independiente, posiblemente impulsado por presiones selectivas locales en su región de origen.
 
+
 ## 7. Referencias bibliográficas  
 Bolger, A. M., Lohse, M., & Usadel, B. (2014). Trimmomatic: A flexible trimmer for Illumina sequence data. Bioinformatics, 30(15), 2114–2120. https://doi.org/10.1093/bioinformatics/btu170
 
