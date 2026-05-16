@@ -123,7 +123,6 @@ En contraste, la muestra de Uganda presentó la rama filogenética más extensa,
 
 Por otro lado, las muestras de Moscú e India se localizaron más próximas a la secuencia de referencia H37Rv, lo que indica una menor distancia evolutiva y una conservación genética relativamente mayor. Sin embargo, el soporte bootstrap de 63 asociado a este agrupamiento representa una confianza estadística moderada, por lo que la relación filogenética observada debe interpretarse con precaución. A pesar de ello, ambas muestras parecen mantener una similitud genética más cercana a la cepa ancestral en comparación con Uganda.
 
-*por si les sirve para discu el porque las fluctuaciones al inicio de las secuencias: En los datos crudos, se observan fluctuaciones pronunciadas en los primeros 10 nucleótidos y un desbalance abrupto al final de la lectura (posición 110 bp), lo cual es indicativo de la presencia de adaptadores y sesgos técnicos de la secuenciación.*
 ## 6. Conclusiones  
 
 La aplicación de filtros rigurosos de calidad (SLIDINGWINDOW) y la eliminación de sesgos de composición en los extremos 5' (HEADCROP:15) mediante Trimmomatic son pasos indispensables. Aunque implican una reducción en la longitud de las lecturas, garantizan una exactitud superior al 99.9% (Phred > Q30) y eliminan ruidos técnicos propios de Illumina. Esto asegura que los SNPs identificados posteriormente sean variaciones biológicas reales y no artefactos de secuenciación.
