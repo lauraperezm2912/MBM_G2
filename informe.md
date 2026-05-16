@@ -125,13 +125,13 @@ Por otro lado, las muestras de Moscú e India se localizaron más próximas a la
 
 ## 6. Conclusiones  
 
+Mtb a diferencia de otros patógenos bacterianos que generan resistencia a los medicamentos mediante transferencia horizontal en los genes, este agente ha generado resistencia principalmente debido a mutaciones puntuales. Esta resistencia genotípica puede desarrollarse debido a polimorfismos de un solo nucleótido (SNP), inserciones y deleciones. Entonces en la actualidad, la presencia de variantes génicas asociadas a farmacorresistencia en Mtb constituyen un problema para los tratamientos actuales lo que provoca el aumento de la mortalidad por TB en el mundo por lo tanto realizar estudios de metagenómica permite conocer la variabilidad génetica que existe alrededor de una zona en especifica. 
+
 La aplicación de filtros rigurosos de calidad (SLIDINGWINDOW) y la eliminación de sesgos de composición en los extremos 5' (HEADCROP:15) mediante Trimmomatic son pasos indispensables. Aunque implican una reducción en la longitud de las lecturas, garantizan una exactitud superior al 99.9% (Phred > Q30) y eliminan ruidos técnicos propios de Illumina. Esto asegura que los SNPs identificados posteriormente sean variaciones biológicas reales y no artefactos de secuenciación.
 
 La constancia en el contenido de GC (64% - 66%) valida exitosamente la identidad biológica de todas las muestras analizadas como *Mycobacterium tuberculosis*. Asimismo, la detección de altas tasas de duplicación por PCR resalta la importancia de incluir protocolos de desduplicación en el flujo de trabajo para garantizar un análisis de cobertura preciso.
 
-Una estrecha relación entre San Petersburgo y Texas concluye con un alto nivel de certeza estadística (Bootstrap 100) que los aislados de San Petersburgo y Texas comparten un ancestro evolutivo común y reciente, presentando una divergencia genética moderada y una alta similitud en sus perfiles mutacionales.
-
-Alta divergencia en el linaje de Uganda, la cepa proveniente de Uganda representa el aislado con mayor distancia genética del estudio. La significativa acumulación de variaciones moleculares sugiere que este linaje ha experimentado un proceso de evolución independiente, posiblemente impulsado por presiones selectivas locales en su región de origen.
+Los resultados permiten observar que exitse U¿una estrecha relación entre San Petersburgo y Texas concluye con un alto nivel de certeza estadística (Bootstrap 100) que los aislados de San Petersburgo y Texas comparten un ancestro evolutivo común y reciente, presentando una divergencia genética moderada y una alta similitud en sus perfiles mutacionales. Por otro lado, existe una alta divergencia en el linaje de Uganda, la cepa proveniente de Uganda representa el aislado con mayor distancia genética del estudio. La significativa acumulación de variaciones moleculares sugiere que este linaje ha experimentado un proceso de evolución independiente, posiblemente impulsado por presiones selectivas locales en su región de origen.
 
 
 ## 7. Referencias bibliográficas  
